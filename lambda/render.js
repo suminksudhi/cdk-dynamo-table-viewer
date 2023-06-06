@@ -68,7 +68,7 @@ module.exports = function(props) {
   function renderItemRow(item) {
     return `
     <tr>
-      ${ headers.map(header => `<td>${renderAttribute(item, header)}</td>`).join('\n') }
+      ${ headers.map(header => `<td>${JSON.stringify(renderAttribute(item, header), null,4)}</td>`).join('\n') }
     </tr>
     `
   }
